@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Onojie </title>
+   <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Bella Onojie Logo">
+            </div>
+            <nav id="navMenu">
+                <a href="#" class="active">Home</a>
+                <a href="#">Products</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contact</a>
+            </nav>
+            <button class="toggle-btn" aria-label="Toggle navigation menu">
+                <span aria-hidden="true">☰</span>
+            </button>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-content">
+          <h4>Food app</h4>
+            <h1>Why stay hungry when you can order from Bella Onojie</h1>
+            <p>Download the bella onoje's food app now on</p>
+            <div class="cta-buttons">
+                <button class="cta-button playstore">Playstore</button>
+                <button class="cta-button appstore">App store</button>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <section class="app-preview">
+        <div class="background-image"></div>
+        <div class="phones-container">
+            <div class="phone phone-left">
+                <div class="phone-content">
+                    <h2>Food for Everyone</h2>
+                    <div class="avatar"></div>
+                </div>
+            </div>
+        </div>
+        <hr style="height:2px;border-width:0;color:gray;background-color:gray; margin-top: 10px; ">
+
+        <div class="container">
+            <div class="fancy-heading">
+                <h2>How the app works</h2>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="account-section">
+        <div class="container">
+            <div class="phone-mockup">
+                <img src="phone-mockup.png" alt="Phone Mockup">
+            </div>
+            <div class="text-content">
+                <h4>Create an account</h4>
+                <h2>Create/login to an existing account to get started</h2>
+                <p>An account is created with your email and a desired password</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="download-section">
+        <div class="content">
+            <h1>Download the app now.</h1>
+            <p>Available on your favorite store. Start your premium experience now</p>
+            <div class="buttons">
+                <a href="#" class="btn playstore">Playstore</a>
+                <a href="#" class="btn appstore">App store</a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Side: Logo -->
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo" />
+            </div>
+            
+            <!-- Center: Social Media Icons -->
+            <div class="footer-social">
+                <a href="#" class="social-icon">
+                    <img src="twitter-icon.png" alt="Twitter">
+                </a>
+                <a href="#" class="social-icon">
+                    <img src="facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="#" class="social-icon">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+            </div>
+            
+            <!-- Right Side: Copyright Text -->
+            <div class="footer-copyright">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const navMenu = document.getElementById('navMenu');
+
+        toggleBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            toggleBtn.setAttribute('aria-expanded', 
+                navMenu.classList.contains('active'));
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
+</html>
